@@ -1,17 +1,16 @@
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
-        answer = []
+        result = []
+        dic = {}
 
-        Anagrams_dic = {}
-
-        for element in strs:
-            temp = "".join(sorted(list(element)))
-            if temp in Anagrams_dic.keys():
-                Anagrams_dic[temp].append(element)
+        for c in strs:
+            key = "".join(sorted(list(c)))
+            if key in dic:
+                dic[key].append(c)
             else:
-                Anagrams_dic[temp] = [element]
+                dic[key] = [c]
+        
+        for key in dic:
+            result.append(dic[key])
 
-        for key in Anagrams_dic.keys():
-            answer.append(Anagrams_dic[key])
-
-        return answer
+        return result
