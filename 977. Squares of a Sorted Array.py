@@ -1,5 +1,5 @@
 # https://leetcode.com/problems/squares-of-a-sorted-array/
-# time complexity : O(n)
+# time complexity : O(nlogn)
 # space complexity : O(n)
 
 class Solution:
