@@ -10,6 +10,7 @@ class Solution:
 #                 dic[arr[i]] = arr.count(arr[i])
 #         return True
 
+
     def uniqueOccurrences(self, arr: List[int]) -> bool:
         dic = {}
         for i in range(len(arr)):
